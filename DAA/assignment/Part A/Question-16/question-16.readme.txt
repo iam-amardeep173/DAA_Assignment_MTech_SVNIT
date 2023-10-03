@@ -1,0 +1,33 @@
+#############################################
+System Reqruirements
+    --> Compiler : g++ compiler
+    --> Hardware : sufficient main memory
+    --> OS       : Windows
+#############################################
+
+Program File : Question-16.cpp
+How to run the program: Open Command Prompt/Powershell
+                        Go to the folder using cd
+                        Run the following command to compile the cpp file
+Command to compile and run the program : Command to run program : g++ -o question-16 question-16.cpp&question-16.exe
+
+    1. Algorithm:
+        func(arr, n)
+        1.  arr = MergeSort(arr, 0, n-1)                    -------------- O(n log n) 
+        2.  print arr[0] to arr[(n/2)-1]                    -------------- O(1)
+        3.  print arr[n/2] to arr[n-1]                      -------------- O(1)
+        
+
+    2. Asymptotic Analysis of Time Complexity
+        Total time complexity = O(n log n + 2) = O(n log n)
+
+    3. Empirical Analysis of Time Complexity
+        Enter the players (2n): 5
+	Time taken by function: 4008000000 microseconds
+         Enter the players (2n): 100
+	Time taken by function: 79370100000 microseconds
+   	Enter the players (2n): 1000
+	Time taken by function: 723344600000 microseconds
+	Enter the players (2n): 10000
+	Time taken by function: 6145395500000 microseconds
+       

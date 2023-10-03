@@ -1,0 +1,38 @@
+#############################################
+System Requirements
+    --> Compiler : g++ compiler
+    --> Hardware : sufficient main memory
+    --> OS : Windows
+#############################################
+
+This program concatenates two binary search trees while also timing the fucntion.
+
+Program File : Question-11.cpp
+How to run the program: Open Command Prompt/Powershell
+                        Go to the folder using cd
+                        Run the following command to compile the cpp file
+Command to compile and run the program : g++ -o Question-11 Question-11.cpp&Question-11.exe
+
+1.Connected Components in an Undirected Graph
+      This C++ program finds the number of connected components in an undirected graph and lists their sizes in descending order. 
+      It uses depth-first search (DFS) to traverse the graph and identify connected components.
+
+2.Use of Program
+
+      1. Input the graph's vertices and edges in the following format:
+          - `v <vertex>`: Add a vertex to the graph.
+          - `e <vertex> <vertex>`: Add an edge between two vertices.
+          - To finish input, type `e` on a new line.
+
+      2. The program will calculate the number of connected components and their sizes.
+
+      3. The output will display the number of components and a sorted list of component sizes (from largest to smallest).
+
+3. Time Complexity
+
+- Adding an edge or a vertex: O(1) - Adding a vertex or an edge to the graph takes constant time.
+- Depth-First Search (DFS): O(V + E) - The DFS algorithm has a time complexity of O(V + E), where V is the number of vertices and E is the number of edges.
+- Counting connected components and sorting: O(V log V) - Counting the connected components and sorting their sizes takes O(V log V) time in the worst case, where V is the number of vertices.
+
+ Overall, the time complexity of the program is dominated by the DFS step, making it O(V + E).
+

@@ -1,0 +1,33 @@
+#############################################
+System Reqruirements
+    --> Compiler : g++ compiler
+    --> Hardware : sufficient main memory
+    --> OS       : Windows
+#############################################
+
+Program File : Question-17.cpp
+How to run the program: Open Command Prompt/Powershell
+                        Go to the folder using cd
+                        Run the following command to compile the cpp file
+Command to compile and run the program : Command to run program : g++ -o Question-17 Question-17.cpp&Question-17.exe
+
+## Usage
+
+1. Enter the number of elements in the sorted array when prompted.
+2. Input the sorted array elements one by one.
+3. The program will calculate and display the closest pair of elements.
+
+## Time Complexity
+
+   The `findClosestPair` function has a time complexity of O(n), where n is the number of elements in the input sorted array. 
+   It performs a single pass through the array to identify the closest pair of elements.
+
+## Asymptotic Analysis
+        Time Complexity in Worst case is O(n).
+Enter the number of elements in the sorted array: 4
+Enter the sorted array elements one by one:
+10 
+20
+30
+40
+Closest pair: (10, 20)

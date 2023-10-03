@@ -1,0 +1,69 @@
+#############################################
+System Reqruirements
+    --> Compiler : g++ compiler
+    --> Hardware : sufficient main memory
+    --> OS       : Windows
+#############################################
+
+Program File : Question10.cpp
+How to run the program: Open Command Prompt/Powershell
+                        Go to the folder using cd
+                        Run the following command to compile the cpp file
+Command to compile and run the program : Command to run program : g++ -o Question10 Question10.cpp&Question10.exe
+   1. Use of Program
+    Type add followed by an integer to add an element to the heap.
+    Type extract to remove and print the top element from the heap.
+    Type max to convert the heap into a max heap.
+    Type min to convert the heap into a min heap.
+    Type sort to sort the heap in ascending order.
+    
+   2.Time Complexity
+       The time complexity of the operations in this program are as follows:
+
+     Adding an element to the heap (add function): O(log n)
+     Extracting the maximum/minimum element from the heap (extract function): O(log n)
+     Converting to a max heap (make_max_heap function): O(n)
+     Converting to a min heap (make_min_heap function): O(n)
+     Heapsort (heapsort function): O(n log n)
+
+   3.Asymptotic Analysis
+     The asymptotic analysis of this program reveals the following complexities:
+
+     -Adding an element to the heap: O(log n)
+      This is because it requires traversing the height of the heap, which is log(n).
+
+     -Extracting the maximum/minimum element from the heap: O(log n)
+        Similar to adding, it involves traversing the height of the heap.
+     
+     -Converting to a max heap: O(n)
+        This is achieved by starting from the middle of the array and performing max-heapify, which takes linear time.
+    
+     -Converting to a min heap: O(n)
+        Similar to max heap conversion, it takes linear time.
+
+     -Heapsort: O(n log n)
+     The sorting process involves repeatedly extracting the maximum/minimum element, which takes log(n) time, and doing this n times results in a total of n log n operations.
+
+
+     add to add, extract to remove,max,min,to sort heap,sort,end to end
+	add 23
+	Added 23
+	23 -    
+	add 15
+	Added 15  
+	23 - 15 - 
+	add 12
+	Added 12       
+	23 - 15 - 12 - 
+	add 50
+	Added 50
+	23 - 15 - 12 - 50 - 
+	sort
+	Sorting
+	23 - 15 - 12 - 50 -
+	extract 15
+	Extracted - 23
+	15 - 12 - 50 -
+	15 - 12 - 50 -
+	end
+	15 - 12 - 50 - 

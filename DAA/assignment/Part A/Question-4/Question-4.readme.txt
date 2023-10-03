@@ -1,0 +1,63 @@
+#############################################
+System Reqruirements
+    --> Compiler : g++ compiler
+    --> Hardware : sufficient main memory
+    --> OS       : Windows
+#############################################
+
+Program File : Question-4.cpp
+How to run the program: Open Command Prompt/Powershell
+                        Go to the folder using cd
+                        Run the following command to compile the cpp file
+Command to compile and run the program : Command to run program : g++ -o Question-4 Question-4.cpp&Question-4.exe
+
+    1.The program performs the following steps:
+	1. Generates a dataset of random integers with a specified size.
+	2. Creates a copy of the dataset and sorts it using the C++ `sort` function for comparison purposes.
+	3. Applies the following sorting algorithms to both the unsorted and sorted datasets:
+  	   - Insertion Sort
+   	   - Merge Sort
+  	   - Quick Sort
+  	   - Heap Sort
+	4. Counts and reports the number of swaps performed by each sorting algorithm on both unsorted and sorted data.
+
+
+    2. Asymptotic Analysis of Time Complexity
+        Insertion Sort:
+	  Average Case: O(N^2)
+          Best Case (already sorted): O(N)
+	Merge Sort:
+	  Average Case: O(N log N)
+	Quick Sort:
+	  Average Case: O(N log N)
+	  Worst Case (if not optimized): O(N^2)
+	Heap Sort:
+	  Average Case: O(N log N)
+
+     3. Empirical Analysis of Time Complexity
+        Testing on unsorted data:      
+	Insertion Sort - Unsorted Data:
+	Swaps: -1789052376
+	Merge Sort - Unsorted Data:
+	Swaps: 0
+	Quick Sort - Unsorted Data:
+	Swaps: 1559542658
+	Heap Sort - Unsorted Data:
+	Swaps: 1548050
+
+	Testing on sorted data:      
+	Insertion Sort - Sorted Data:
+	Swaps: 0
+	Merge Sort - Sorted Data:
+	Swaps: 0
+	Quick Sort - Sorted Data:
+	Swaps: 1559542658
+	Heap Sort - Sorted Data:
+	Swaps: 1548050
+        The program will output the number of swaps performed by each sorting algorithm on both unsorted and sorted datasets.
+
+
+
+    
+    
+

@@ -1,0 +1,110 @@
+
+#############################################
+System Reqruirements
+    --> Compiler : g++ compiler
+    --> Hardware : sufficient main memory
+    --> OS       : Windows
+#############################################
+
+Program File : Question-9.cpp
+How to run the program: Open Command Prompt/Powershell
+                        Go to the folder using cd
+                        Run the following command to compile the cpp file
+Command to compile and run the program : Command to run program : g++ -o Question-9 Question-9.cpp&Question-9.exe
+
+
+-----------------------
+2. Algorithm:
+-----------------------
+Algorithm partA_p9()
+1.	let N = 100000, a[100000]
+2.	bubbleSort(a);
+3.	insertSort(a);
+4.	mergeSort(a, 0, N - 1)
+5.	mySort(a, 0, N - 1)
+6.	semiBubbleSort(a)
+7.	exit
+
+Algorithm mySort(int a[], int left, int right)
+1.	if left < right
+2.		then middle = left + (right - left) / 2
+3.		mySort(a, left, middle)
+4.		mySort(a, middle + 1, right)
+5.		if a[middle] > a[middle + 1]
+6.			then merge(a, left, middle, right)
+
+Algorithm merge(int a[], left, mid, right)
+1.	n1 = mid - left + 1
+2.	n2 = right - mid
+3.	for i = 0 to n1 - 1
+4.		leftArr[i] = a[left + i]
+5.	for i = 0 to n2 - 1
+6.		rightArr[i] = a[mid + 1 + i]    
+7.	i = 0
+8.	j = 0
+9.	k = left
+10.	while i < n1 and j < n2
+11.		if leftArr[i] <= rightArr[j]
+12.			a[k] = leftArr[i]
+13.			i = i + 1
+14.		else
+15.			a[k] = rightArr[j]
+16.			j = j + 1
+17.		k = k + 1
+18.	while i < n1
+19.		a[k] = leftArr[i]
+20.		i = i + 1
+21.		k = k + 1
+22.	while j < n2
+23.		a[k] = rightArr[j]
+24.		j = j + 1
+25.		k = k + 1
+
+Algorithm semiBubbleSort(a)
+1.	let flag = false
+2.	for i = 1 to N
+3.		do flag = false
+4.		for j = 1 to N - 1
+5.			do if a[j] > a[j+1]
+6.				then int tmp = a[j]
+7.				a[j] = a[j+1]
+8.				a[j+1] = tmp
+9.				flag = true
+10.		if !flag
+11.			then break
+12.	return
+
+-----------------------
+3. Asymptotic Analysis:
+-----------------------
+(a)	For mySort, we have added an additional check where the merge will be performed
+	only if the value at middle is greater to its immediate next. However, improved
+	merge sort will follow the merge sort for most of the comparisons. 
+	Therefore, the asymptotic notation Big-O is O(n log(n))
+(b)	For semiBubbleSort, instead of traversing through all elements for comparisons
+	as in conventional bubble sort algorithm, we try to eliminate extra comparisons,
+	if they are already marked as flagged and no other element in the vector is greater
+	than the current value. However, for most of the comparisons, conventional bubble sort
+	algorithm will be followed. 
+	Therefore, the asymptotic notation Big-O is O(n^2)
+
+-----------------------
+4. Empirical Analysis:
+-----------------------
+- Using time library for measuring time durations
++-------------------------------------------------------------------------------------------------------------------------------------+
+|n		| Bubble Sort	        | Insertion Sort	        | Merge Sort	        | My Sort	| Semi-Bubble Sort  |
++-------------------------------------------------------------------------------------------------------------------------------------+
+|n=100		| 0 seconds		| 0 seconds			| 0 seconds		| 0 seconds	| 0 seconds	    |
+|n=1000		| 0 seconds		| 0 seconds			| 0 seconds		| 0 seconds	| 0 seconds         |
+|n=10000	| 0 seconds		| 0 seconds 		        | 0 seconds		| 0 seconds   	| 0 seconds         |
+|n=100000	| 15 seconds	        | 9 seconds			| 0 seconds		| 0 seconds  	| 10 seconds        |
+|n=1000000	| > 10 seconds	        | > 10 seconds		        | ~ 10 seconds	        | ~ 10 seconds  | > 10 seconds      |
++-------------------------------------------------------------------------------------------------------------------------------------+
+
+-----------------------
+5. Observation:
+-----------------------
+(a) For n large enough to be nearer to 100000, all algorithms will be executed within 10 seconds.
+
+

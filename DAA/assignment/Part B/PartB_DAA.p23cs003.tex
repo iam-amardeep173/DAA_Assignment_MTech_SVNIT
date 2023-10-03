@@ -1,0 +1,339 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage{enumitem}
+\usepackage{amssymb}
+
+\title{Sardar Vallabhbhai National Institute of Technology,  Department of Computer Science and Engineering, Surat}
+	
+
+\begin{document}
+	
+	\maketitle
+
+	1.
+	\begin{enumerate}[label=(\alph*)]
+		\item $f(n) = 100 * 2^n + 8n^2$
+		
+		To prove: $f(n) = O(2^n)$ \\
+		
+		$f(n) \leq 100 * 2^n + 8 * 2^n$\\
+		$f(n) \leq 108 * 2^n$\hspace{2cm} ...(A)\\
+		Here, $c_1=108$ and $g(n)=2^n$ and $n_0=1$         \\
+		\boldmath$\therefore f(n)= O(2^n)$\unboldmath\\
+		
+		Also, to check if $f(n)= \theta(2^n)$\\
+		
+		$f(n) \geq 100 * 2^n + 8 * (0)$\\
+		$f(n) \geq 100 * 2^n$\hspace{2cm} ...(B)\\
+		Here, $c_2=100$ and $g(n)=2^n$  and $n_0=1$       \\
+		\boldmath$\therefore f(n)= \Omega(2^n)$\unboldmath\\
+		
+		From (A) and (B):\\
+		$0 \leq 108 * 2^n \leq 100 * 2^n + 8n^2 \leq 100 * 2^n$
+		for all $n \geq n_0$\\
+		i.e. $c_1g(n)\leq f(n) \leq c_2g(n)$    \hspace{2cm}where $g(n) = 2^n$ \\
+		\boldmath$\therefore f(n)= \theta(2^n)$\unboldmath\\
+		
+		
+		
+		\item 
+		$f(n) = 3n + 8$\\
+		$f(n) \geq 3n$ \\
+		Here, $c=3$ and $n_0=1$\\
+		\boldmath$\therefore f(n)= \Omega(n)$\unboldmath\\
+		
+		Given:$f(n)=3n + 3=\Omega(n)$\\
+		$f(n)=3n + 3=\Omega(n)$\\
+		Both the above facts are correct. $\Omega$ defines the lower bound of an algorithm. However, $\Omega$ is not tightly-bound. Thus, all the set of functions with their growth rate lower than that of the actual lower bound are included in the lower bound of the function.\\
+		
+		$f(n) = 3n + 3$\\
+		$f(n) \geq 3n$ \\
+		Here, $c=3$ and $n_0=1$\\
+		$\therefore f(n) = \Omega(n)$\\
+		
+		$f(n) = 3n + 3$\\
+		$f(n) \geq 3 * 1$ \\
+		Here, $c=3$ and $g(n)=1$\\
+		$\therefore f(n) = \Omega(1)$\\		
+		
+		Thus, $f(n) = \Omega(n) = \Omega(1)$\\
+		The prescribed lower bound for $f(n)$ should be $\Omega(n)$ as the it is the tightly lower bound time-complexity of the function.\\
+		
+		\item 
+		\begin{itemize}
+			\item $f(n) = n^2$\\
+			$f(n) \leq n^2$\\
+			Here, $c_1 = 1$ $n_0=0$\\
+			
+			Also, \\
+			$f(n) = n^2$\\
+			$f(n) \geq n^2$\\
+			Here, $c_2 = 1$ $n_0=1$\\
+			$\therefore f(n)=\theta(n^2)$
+			\vspace{1 cm}
+			
+			\item $g(n) = 2n^2$\\
+			$g(n) \leq 2n^2$\\
+			Here, $c_1 = 2$ $n_0=0$\\
+			
+			Also, \\
+			$g(n) = 2n^2$\\
+			$g(n) \geq n^2$\\
+			Here, $c_2 = 1$ $n_0=1$\\
+			$\therefore g(n)=\theta(n^2)$
+			
+			
+		\end{itemize}
+		
+		\item Let $f(n)$ and $g(n)$ be any two functions\\
+		Assume that $f(n)=\theta(g(n))$\\
+		Therefore, by definition,\\
+		$c_1 g(n) \leq f(n) \leq c_2 g(n)$ \hspace{2cm}$c_1,c_2$ are constants\\
+		\begin{itemize}
+			\item Consider \\$f(n) \leq c_2 g(n)$\\
+			$\therefore f(n) = O(g(n))$\\
+			
+			\item Consider \\$c_1 g(n) \leq f(n)$  \\
+			$\therefore f(n) = \Omega(g(n))$\\
+		\end{itemize}
+		
+		
+		Conversely, if given \\$f(n) = \Omega(g(n))$\ and 
+		$f(n)=O(g(n))$\\
+		then, by definition,\\
+		$f(n) \geq c_1 g(n)$ and $f(n) \leq c_2 g(n)$ \hspace{2cm}$c_1,c_2$ are constants\\
+		$\therefore c_1 g(n) \leq f(n) \leq c_2 g(n)$\\
+		$\therefore f(n)=\theta(n)$\\
+		
+		%Question ())
+
+		\item 
+		\begin{enumerate}[label=(\roman*)]
+			\item $f(n)=1+2+3+\dots n$\\ 
+			$f(n) \leq n+n+n+\dots n$\\
+			$f(n) \leq n*n$\\
+			$f(n) \leq n^2$\\
+			$f(n) \leq c_1 n^2$  \hspace{2cm} $c_1$ is constant\hspace{2cm} ....(A)\\
+			
+			$f(n)=1+2+3+\dots n$\\ 
+			$f(n) \geq n/2+n/2+n/2+\dots n/2$\\
+			$f(n) \geq n*n/2$\\
+			$f(n) \geq n^2/2$\\
+			$f(n) \geq c_2 n^2$  \hspace{2cm} $c_2$ is constant\hspace{2cm} ....(B)\\
+			
+			From (A) and (B)\\
+			$c_1 n^2 \leq f(n) \leq c_2 n^2$\\
+			\boldmath $\therefore f(n) = \theta(n) $\unboldmath\\
+			
+			\item $f(n) = 2n^3-n^2$\\
+			$f(n) \leq 2n^3$\\
+			Here, $c=2$ and $g(n)=n^3$ and $n_0=1$\\
+			\boldmath$\therefore f(n)=O(n^3)$\unboldmath\\
+			
+			\item $f(n) = 7n^2logn + 25000n$\\
+			$f(n) \leq 7n^2logn + 25000n^2logn$\\
+			Here, $c=25007$ and $g(n)=n^2logn$ and $$\\
+			\boldmath$\therefore f(n)=O(n^2logn)$\unboldmath\\
+			
+		\end{enumerate}		
+	
+	%Question (f)
+	
+	\item Given: $T1(n) = O(f(n))$ and $T 2(n) = O(g(n))$\\
+	 	\begin{enumerate}[label=(\alph*)]
+	 		\item
+	 		To prove: $T1(n) + T2(n) =
+	 		max(O(g(n), O(f(n))$\\
+	 		
+	 		%$T1(n) = O(f(n))$\\
+	 		%$\therefore T1(n) \leq c_1 f(n)$ \hspace{2cm} $c_1$ %is constant\\
+	 		
+	 		%$T2(n) = O(g(n))$\\
+	 		%$\therefore T2(n) \leq c_2 g(n)$ \hspace{2cm} $c_2$ is constant\\
+	 		
+	 		$ T1(n)+T2(n) = O(f(n)) + O(g(n))$\\
+	 		
+	 		if $O(f(n)) > O(g(n))$, \\
+	 		$T1(n)+T2(n) \leq O(f(n)) + O(f(n))$\\
+	 		$T1(n)+T2(n) \leq 2O(f(n))$\\
+	 		$T1(n)+T2(n) = O(f(n))$\\
+	 		
+	 		if $O(f(n)) < O(g(n))$, \\
+	 		$T1(n)+T2(n) \leq O(g(n)) + O(g(n))$\\
+	 		$T1(n)+T2(n) \leq 2O(g(n))$\\
+	 		$T1(n)+T2(n) = O(g(n))$\\
+	 		
+	 		$\therefore T1(n) + T2(n) =
+	 		max(O(g(n), O(f(n))$\\
+	 		
+	 		\item 
+	 		To prove: $T1(n) * T2(n) =
+	 		O((g(n)*(f(n))$\\
+	 		
+	 		$T1(n) = O(f(n))$\\
+	 		$\therefore T1(n) \leq c_1 f(n)$ \hspace{2cm} $c_1$ is constant\\
+	 		
+	 		$T2(n) = O(g(n))$\\
+	 		$\therefore T2(n) \leq c_2 g(n)$ \hspace{2cm} $c_2$ is constant\\
+	 		
+	 		$\therefore T1(n)*T2(n)\leq c_1 f(n) * c_2 g(n)$\\
+	 		$\therefore T1(n)*T2(n)\leq (c_1*c2) * f(n) * c_2 g(n)$\\
+	 		$\therefore T1(n)*T2(n)\leq c_3 * f(n) * g(n)$\hspace{2cm} ...$c_3=c_1*c_2$ (constant)\\
+	 		$\therefore T1(n) * T2(n) = O((g(n)*(f(n))$
+	 			 		
+	 	\end{enumerate}
+ 	
+ 	%question (g)
+ 	\item 
+ 	$f(n)\leq f(n)+g(n)$\\
+ 	Also,$g(n)\leq f(n)+g(n)$\\
+ 	$\therefore max(f(n),g(n))= O(f(n)+g(n))$\hspace{2cm}...(A)\\
+ 	\\
+ 	Similarly,\\
+ 	$max(f(n),g(n))\geq 1/2 (f(n)+g(n))$\\
+ 	$\therefore max(f(n),g(n))= \Omega(f(n)+g(n))$\hspace{2cm}...(B)\\
+ 	\\
+ 	From (A) and (B)\\
+ 	$max(f(n),g(n))= \theta(f(n)+g(n))$
+ 	
+ 	
+ 	%question h
+ 	\item 
+ 	\begin{enumerate}[label=(\alph*)]
+ 		\item $f(n) =  n^2 2^n + n^{100}$\\
+ 		$f(n) \leq  n^2 2^n + n^2 2^n$\\
+ 		$f(n) \leq 2n^2 2^n$\\
+ 		Here, $c_1 = 2$ and $g(n) = n^2 2^n$\\
+ 		Also, \\
+ 		$f(n) \geq  n^2 2^n $\\
+ 		Here, $c_2 = 1$ and $g(n) = n^2 2^n$\\
+ 		$\therefore c_2g(n)\leq f(n) \leq c_1g(n)$\\
+ 		$\therefore f(n) = \theta(n^2 2^n)$     \hspace{2cm} .... By definition\\
+ 		
+ 		\item $f(n) = n^2/logn$\\
+ 		$f(n) \leq n^2$\\
+ 		$\therefore f(n)=O(n^2)$\\
+ 		However, $f(n) \neq \Omega(n^2)$\\
+ 		Now, For any two functions $f(n)$ and $g(n)$, $f (n) = \theta(g(n))$ only if
+ 		$f(n)=O(g(n))$ and $f(n)=\Omega(g(n))$.\\
+ 		$\therefore f(n) \neq \theta(n^2)$\\
+ 		
+ 	\end{enumerate}
+ 	
+ 	
+ 	% question (i)
+ 	\item 
+ 	Given: $T(x)$ is a polynomial of degree $n$\\
+ 	Let $T(x)=a_0 + a_1 x + a_2 x^2 + a_3 x^3 + \dots a_m x^n$\\
+ 	$\therefore T(x) \leq a_0 x^n + a_1 x^n + a_2 x^n + a_3 x^n + \dots a_m x^n$\\
+ 	$\therefore T(x) \leq (a_0 + a_1 + a_2 + a_3 + \dots a_m) x^n$\\
+ 	Let $(a_0 + a_1 + a_2 + a_3 + \dots a_m) = c_1$\\
+ 	$\therefore T(x) \leq c_1 x^n$ \hspace{2cm} ...(A)\\
+ 	
+ 	$T(x)=a_0 + a_1 x + a_2 x^2 + a_3 x^3 + \dots a_m x^n$\\
+ 	$\therefore T(x) \geq a_m x^n $\\
+ 	Let $a_m = c_1$\\
+ 	$\therefore T(x) \geq c_2 x^n$ \hspace{2cm} ...(B)\\
+ 	
+ 	From (A) and (B)\\
+ 	$c_2(x^n) \leq T(x) \leq c_1(x^n)$\\
+ 	By definition,\\
+ 	$T(x) = \theta(x^n)$ 
+ 	
+ 	\item 
+ 	$P (n) = a_0 + a_1 n + a_2 n^2 + \dots a_m n^m $\\
+ 	$\therefore P(n) \leq a_0 n^m + a_1 n^m + a_2 n^m + a_3 n^m + \dots a_m x^m$\\
+ 	$\therefore P(n) \leq (a_0 + a_1 + a_2 + a_3 + \dots a_m) x^m$\\
+ 	Let $(a_0 + a_1 + a_2 + a_3 + \dots a_m) = c_1$\\
+ 	$\therefore P(n) \leq c_1 n^m$\\
+ 	$\therefore P(n) = O(n^m)$\\
+ 	
+ 	
+ 	\item 
+ 	%question k
+ Let, T(n) be the running time complexity.\\
+ Assume, n = 4\\
+ \\
+ $i=1 \hspace{2cm} j=1 \hspace{4cm} k=1$\\
+ $i=2 \hspace{2cm} j=(1),(2) \hspace{3.1cm} k=(1),(1,2)$\\
+ $i=3 \hspace{2cm} j=(1),(2),(3) \hspace{2.5cm} k=(1),(1,2),(1,2,3)$\\
+ $i=4 \hspace{2cm} j=(1),(2),(3),(4) \hspace{2cm} k=(1),(1,2),(1,2,3),(1,2,3,4)$\\
+ \\
+ $\therefore \frac{n(n+1)(2n+1)}{6}$\\
+ \\
+ $\therefore T(n) = O(n^{3})$
+ 	
+ 	\item 
+ 	%question (l)
+ 	\begin{enumerate}[label=(\roman*)]
+ 		\item $t_{A(n)} = 1000n$ and $t_{B(n)} = 10n^2$\\
+ 		if $t_{A(n)}$ is faster than $t_{B(n)} $\\
+ 		$t_{A(n)} > t_{B(n)} $\\
+ 		$\therefore 1000n > 10n^2$\\
+ 		$\therefore 1000n - 10n^2 >0$\\
+ 		$\therefore 10n(100-n) > 0$\\
+ 		$\therefore n > 0$ or $100 > n $\\
+ 		$\therefore n \in (0,100)$\\
+ 		
+ 		\item $t_{A(n)} = 1000nlog_2n$ and $t_{B(n)} = n^2$\\
+ 		$t_{A(n)} > t_{B(n)} $\\
+ 		$\therefore 1000nlog_2n > n^2$\\
+ 		$\therefore 1000nlog_2n-n^2 > 0$\\
+ 		$\therefore n(1000log_2n-n) > 0$\\
+ 		$\therefore n>0$ or $1000log_2n>n$\\
+ 		
+ 		\item $t_{A(n)}= 2n^2 and t_{B(n)} = n^3$\\
+ 		$t_{A(n)} > t_{B(n)} $\\
+ 		$\therefore 2n^2 > n^3$\\
+ 		$\therefore 2n^2 -n^3 > 0$\\
+ 		$\therefore n^2(2-n) > 0$\\
+ 		$\therefore n^2>0$ or $2 > n$\\
+ 		$\therefore n \in (0,2)$\\
+ 		
+ 		\item $t_{A(n)} = 2n and t_{A(n)} = 100n$\\
+ 		$t_{A(n)} > t_{B(n)} $\\
+ 		$\therefore 2n > 100n$\\
+ 		$\therefore 2n - 100n > 0$\\
+ 		$\therefore -98n > 0$\\
+ 		$\therefore n \in (-\infty,0)$\\
+ 		
+ 		
+ 		
+ 	\end{enumerate}
+ 	%quetion (m)
+ 	\item
+
+\begin{document}
+
+
+Consider an input array $A$ of $n$ elements. Each element is an $n$-bit integer except 0. In this scenario, I recommend using the Radix Sort algorithm for sorting the array. Here's why:
+
+\begin{enumerate}
+  \item \textbf{Stable Sorting}: Radix Sort is a stable sorting algorithm, which means it preserves the relative order of equal elements. This is important when you want to maintain any existing order in your data.
+
+  \item \textbf{Linear Time Complexity}: Radix Sort has a time complexity of $O(nk)$, where $n$ is the number of elements, and $k$ is the number of digits in the largest number. In this case, the largest number has $n$ bits, so $k$ is also $n$. This results in a linear time complexity of $O(n \cdot n)$, which simplifies to $O(n)$.
+
+  \item \textbf{No Comparison Operations}: Unlike comparison-based sorting algorithms (e.g., QuickSort, MergeSort), Radix Sort does not require comparing elements to each other. Instead, it distributes elements into buckets based on each digit's value (in base-$n$), and this process is done for each digit. This makes it efficient for large data sets.
+
+  \item \textbf{Predictable Performance}: The performance of Radix Sort is predictable and does not depend on the specific input distribution. It works well for both uniformly distributed and non-uniformly distributed data.
+
+  \item \textbf{In-Place or Out-of-Place}: Radix Sort can be implemented in an in-place manner or with additional memory for intermediate data structures, depending on your memory constraints.
+
+  \item \textbf{Efficient for Large Integers}: Since your input consists of $n$-bit integers, Radix Sort is efficient because it takes advantage of the fixed size of the integers and doesn't rely on complex comparison operations.
+\end{enumerate}
+
+In summary, Radix Sort is a great choice for sorting an array of $n$-bit integers, including cases where the largest integer can be represented using $n$ bits. It offers predictable performance with a time complexity of $O(n)$ and is efficient for large integers.
+
+
+ 	
+ 	%quetion (n)
+ 	\item
+ 	
+ 	Given: Input array a[1..n] of arbitrary numbers
+ 	
+ 	$O(1)$ implies that the number of distinct elements are independent of the size of the array. The number of distinct elements remain constant even if the size of array ($n$) changes . \\
+ 	
+ 	
+		
+	\end{enumerate}		
+	
+\end{document}

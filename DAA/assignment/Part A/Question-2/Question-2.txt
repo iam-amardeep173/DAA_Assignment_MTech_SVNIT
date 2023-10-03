@@ -1,0 +1,24 @@
+To output the execution time in microseconds in your C++ program:
+
+Measure Time in Microseconds:
+
+Use a timer before and after executing the code you want to measure.
+Record the current time before starting the code execution.
+Record the current time again after the code execution is complete.
+Calculate the time difference between the two recorded times.
+Convert to Microseconds:
+
+Convert the time difference into microseconds (1 second = 1,000,000 microseconds) using appropriate conversions or libraries, such as <chrono> in C++.
+Display Time in Microseconds:
+
+Print the calculated time in microseconds as part of your program's output.
+pseudo-code:-
+start_time = get_current_time() // Record the start time
+execute_code_to_measure() // Run the code you want to measure
+end_time = get_current_time() // Record the end time
+
+// Calculate the time difference in microseconds
+time_difference = end_time - start_time
+
+// Display the time in microseconds
+print("Time taken: " + time_difference + " microseconds")

@@ -1,0 +1,42 @@
+#############################################
+System Requirements
+    --> Compiler : g++ compiler
+    --> Hardware : sufficient main memory
+    --> OS : Windows
+#############################################
+
+This program concatenates two binary search trees while also timing the fucntion.
+
+Program File : Question-12.cpp
+How to run the program: Open Command Prompt/Powershell
+                        Go to the folder using cd
+                        Run the following command to compile the cpp file
+Command to compile and run the program : g++ -o Question-12 Question-12.cpp&Question-12.exe
+
+1. Simple Exponent 
+
+    1.1 Algorithm:
+        concatenate(root1, root2, n1, n2)
+        1. while n1->right != NULL AND n2 -> left -> NULL              --------------- O(max(m,n))
+        2.     n1 = n1 -> right                                        --------------- O(1) * max(m,n) 
+        3.     n2 = n2 -> right                                        --------------- O(1) * max(m,n)
+        4. if n1 -> right == NULL                                      --------------- O(1)
+        5.     n1 -> right = root2                                     --------------- O(1)
+        6.     return root1                                            --------------- O(1)
+        7. if n2 -> left == NULL                                       --------------- O(1)
+        8.     n2 -> left = root1                                      --------------- O(1)
+        9.     return root2                                            --------------- O(1)       
+
+    1.2 Asymptotic Analysis of Time Complexity
+        Total time complexity = O(3 max(m,n) + 6) = O(max(m,n)) where m,n are heights of tree 1 and tree 2 which in average case will be 
+        log(number of nodes in the tree)
+        
+
+    1.3 Empirical Analysis of Time Complexity
+        The program has been tested on both small and large datasets. Empirical analysis shows that the algorithm performs efficiently even for large datasets, meeting the O(h) time complexity.
+        Size 1: 100001
+	Size 2: 100004
+	Time taken to concatenate 2 trees with 100001 elements: 5 microseconds
+	Size 1: 10000
+	Size 2: 10000
+	Time taken to concatenate 2 trees with 10000 elements: 2 microseconds

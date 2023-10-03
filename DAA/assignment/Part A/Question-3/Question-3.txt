@@ -1,0 +1,40 @@
+#############################################
+System Reqruirements
+    --> Compiler : g++ compiler
+    --> Hardware : sufficient main memory
+    --> OS       : Windows
+#############################################
+
+Program File : Question-3.cpp
+How to run the program: Open Command Prompt/Powershell
+                        Go to the folder using cd
+                        Run the following command to compile the cpp file
+Command to compile and run the program : Command to run program : g++ -o Question-3 Question-3.cpp&Question-3.exe
+
+    1.Duplicate Removal Program
+	This program generates a dataset of random integers, removes duplicates, measures the time taken for the removal process, and saves a portion of the dataset to a text file.
+
+	*Program Description
+	    The program performs the following steps:
+		1. Generates a dataset of random integers with a specified size.
+		2. Identifies and removes duplicate values from the dataset while preserving the order of the original elements.
+		3. Measures the time taken to remove duplicates and counts the number of duplicates removed.
+                4. Saves a portion of the dataset to a text file named "data.txt."
+
+
+    2. Time Complexity
+        Generating the random dataset of size N: O(N)
+	Removing duplicates from the dataset of size N: O(N) in the average case, as it involves iterating through the dataset once. 
+	However, in the worst case (if there are no duplicates), it is still O(N).
+
+     3. Empirical Analysis of Time Complexity
+        Time taken to remove duplicates: 2021753 microseconds
+	Number of duplicates removed: 212
+
+     4. Files
+	 main.cpp: The main C++ source code file.
+	 data.txt: Text file containing a portion of the generated dataset.
+
+    
+    
+

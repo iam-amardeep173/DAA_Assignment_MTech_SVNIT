@@ -1,0 +1,61 @@
+#############################################
+System Requirements
+    --> Compiler : g++ compiler
+    --> Hardware : sufficient main memory
+    --> OS : Windows
+#############################################
+
+This program calculates and shows the answer to a^s_po and a^l_po seperately while also timing them.
+
+Program File : question-6.cpp
+How to run the program: Open Command Prompt/Powershell
+                        Go to the folder using cd
+                        Run the following command to compile the cpp file
+Command to compile and run the program : g++ -o question-6 question-6.cpp&question-6.exe
+
+
+Exponentiation Algorithms:-
+
+1. Binary Exponentiation
+Binary exponentiation is an efficient method for calculating exponentiation with a time complexity of O(log n), where n is the exponent. It repeatedly squares and multiplies to reduce the number of multiplications needed.
+
+2. Conventional Exponentiation
+This algorithm uses a conventional loop to calculate exponentiation with a time complexity of O(n), where n is the exponent. It performs n multiplications sequentially.
+
+3. Square-and-Multiply Exponentiation
+Similar to binary exponentiation, this algorithm reduces the number of multiplications needed with a time complexity of O(log n), where n is the exponent. It uses squaring operations whenever possible to optimize the calculation.
+
+
+Example
+Here's an example of running the program:-
+Enter the a(base) value and bits length of power value : 
+2 5
+The random value generate is : 27
+Binary_Exponentiation Result: 134217728
+Binary_Exponentiation Time: 4 microseconds  (Time Complexity: O(log n))
+      
+Conventional Exponentiation Result: 134217728   
+Conventional Exponentiation Time: 0 microseconds  (Time Complexity: O(n))
+
+Square-and-Multiply Result: 134217728
+Square-and-Multiply Time: 0 microseconds  (Time Complexity: O(log n))
+
+Enter the a(base) value and bits length of power value : 
+5 6
+The random value generate is : 59
+Binary_Exponentiation Result: -1986755326041691875      
+Binary_Exponentiation Time: 5 microseconds
+Conventional Exponentiation Result: -1986755326041691875
+Conventional Exponentiation Time: 0 microseconds        
+Square-and-Multiply Result: -1986755326041691875        
+Square-and-Multiply Time: 0 microseconds
+
+Enter the a(base) value and bits length of power value : 
+7 8
+The random value generate is : 151
+Binary_Exponentiation Result: -5305479667163571337
+Binary_Exponentiation Time: 4 microseconds
+Conventional Exponentiation Result: -5305479667163571337
+Conventional Exponentiation Time: 1 microseconds
+Square-and-Multiply Result: -5305479667163571337
+Square-and-Multiply Time: 0 microseconds

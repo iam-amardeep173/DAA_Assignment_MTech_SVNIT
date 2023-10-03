@@ -1,0 +1,67 @@
+#############################################
+System Reqruirements
+    --> Compiler : g++ compiler
+    --> Hardware : sufficient main memory
+    --> OS       : Windows
+#############################################
+
+Program File : Question13.cpp
+How to run the program: Open Command Prompt/Powershell
+                        Go to the folder using cd
+                        Run the following command to compile the cpp file
+Command to compile and run the program : Command to run program : g++ -o Question13 Question13.cpp&Question13.exe
+
+## Usage
+
+1. Insert a key-value pair: Adds a new key-value pair to the store.
+2. Delete a key: Removes a key-value pair from the store.
+3. Find the value for a key: Retrieves the value associated with a key.
+4. Add to a value: Increases the value associated with a key.
+5. Add to all values: Increases all values in the store by a specified amount.
+6. Exit: Quits the program.
+
+
+## Time Complexity
+
+- Insertion (insertValue): O(n) - In the worst case, the function may need to shift all elements to insert a new element.
+
+- Deletion (deleteValue): O(n) - Similar to insertion, deletion may require shifting elements.
+
+- Finding a value (findValue): O(log n) - Binary search is used to find the key.
+
+- Adding to a value (addValue): O(n) - Similar to deletion, adding to a value may require shifting elements.
+
+- Adding to all values (addValueToAll): O(n) - The addValueToAll function iterates through all elements and adds 
+    a value to each one. This operation has a time complexity of O(n) 
+    because it involves visiting every element once.
+
+    Empirical analysis
+	n=10----0ms
+	n=100---1ms
+	n=1000---2ms
+	n=10000---13ms
+	n=1000000--22 ms
+
+
+
+Output:-
+1. Insert(x, y)    
+2. Delete(x)       
+3. Find value(x)   
+4. Add(x, y)       
+5. Add all(y)      
+6. Exit
+Enter your choice: 2
+Enter the key (x) to delete: 25
+Time taken for delete() in microseconds: 1
+1. Insert(x, y)
+2. Delete(x)
+3. Find value(x)
+4. Add(x, y)
+5. Add all(y)
+6. Exit
+Enter your choice: 1
+Enter the key (x): 20
+Enter the value (y): 30
+Time taken for insert() in microseconds: 4
+
