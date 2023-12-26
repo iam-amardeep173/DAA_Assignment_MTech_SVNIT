@@ -1,0 +1,65 @@
+#############################################
+System Reqruirements
+    --> Compiler : g++ compiler
+    --> Hardware : sufficient main memory
+    --> OS       : Windows
+#############################################
+
+Program File : Question-5.cpp
+How to run the program: Open Command Prompt/Powershell
+                        Go to the folder using cd
+                        Run the following command to compile the cpp file
+Command to compile and run the program : Command to run program : g++ -o Question-5 Question5.cpp&Question5.exe
+
+------------------------------------
+Activity Scheduling Algorithms
+------------------------------------
+	This code implements two different algorithms for scheduling activities based on their start and finish times.
+	The two algorithms are:
+
+	**Last Start First Algorithm (sortOnStart())**: This algorithm sorts activities based on their start times and then selects activities with non-overlapping intervals, starting with the latest start time.
+
+	**Optimized Algorithm (optimalSort())**: This algorithm sorts activities based on their finish times and then selects activities with non-overlapping intervals, starting with the earliest finish time.
+
+-------------------------------
+Asymptotic Analysis
+-------------------------------
+	Last Start First Algorithm (sortOnStart())
+
+	Time Complexity: O(n^2) for sorting (insertion sort) + O(n) for activity selection = O(n^2)
+	Space Complexity: O(n) for storing intervals
+	Optimized Algorithm (optimalSort())
+
+	Time Complexity: O(n^2) for sorting (insertion sort) + O(n) for activity selection = O(n^2)
+	Space Complexity: O(n) for storing intervals
+
+--------------------------
+Algorithm Explanation
+--------------------------
+	Last Start First Algorithm (sortOnStart())
+
+	This algorithm first sorts the activities based on their start times using an insertion sort.
+	After sorting, it iterates through the sorted activities and selects non-overlapping intervals, starting with the latest start time.
+	The algorithm maintains a count of selected activities and updates the starting time for comparison in the next iteration.
+
+	Optimized Algorithm (optimalSort())
+
+	Similar to the first algorithm, this algorithm sorts the activities using an insertion sort, but this time based on finish times.
+	After sorting, it iterates through the sorted activities and selects non-overlapping intervals, starting with the earliest finish time.
+	The algorithm maintains a count of selected activities and updates the finishing time for comparison in the next iteration.
+	These algorithms are useful for scenarios where you have a set of activities with start and finish times, and you want to maximize the number of non-overlapping activities that can be scheduled.
+
+----------------
+Output
+----------------
+	Enter the intervals (-1) to stop
+	1 2
+	3 4
+	2 6
+	4 6
+	3 5
+	-1
+	Activities selected in lastStart first : 3
+	Time required in lastStart first: 2800 nanoseconds
+	Activities selected in optimal algo  : 3
+	Time required in optimal algo : 2500 nanoseconds

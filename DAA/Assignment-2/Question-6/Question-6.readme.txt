@@ -1,0 +1,51 @@
+#############################################
+System Reqruirements
+    --> Compiler : g++ compiler
+    --> Hardware : sufficient main memory
+    --> OS       : Windows
+#############################################
+
+Program File : Question6.cpp
+How to run the program: Open Command Prompt/Powershell
+                        Go to the folder using cd
+                        Run the following command to compile the cpp file
+Command to compile and run the program : Command to run program : g++ -o Question6 Question6.cpp&Question6.exe
+
+*** Knapsack Problem Solver ***
+
+** Overview **
+      This program is designed to solve the 0/1 Knapsack Problem using a greedy approach followed by a fractional addition of items if the capacity is not fully utilized.
+	Generate a dataset of items with random values and fixed weights.
+	Sort the items based on their value-to-weight ratio in descending order.
+	Iterate through the sorted items and add them to the knapsack until it's full. If an item cannot fit entirely, add a fraction of it.
+	Return the maximum value that can be obtained.
+
+** Algorithm Complexity **
+	Time Complexity: The time complexity is dominated by the sorting step, which uses an insertion sort. 
+	In the worst case, it has a time complexity of O(n^2). 
+	The knapsack algorithm itself has a linear time complexity of O(n) since we iterate through the items once.
+	*Space Complexity*: The space complexity is O(n) due to the storage of items.
+
+** Asymptotic Analysis **
+	The algorithm has a polynomial time complexity due to the sorting step. In the worst case, it may take a significant amount of time for large datasets.
+
+
+** Empirical Analysis **
+      The program includes timing measurements to empirically analyze its performance. Here are the results of running the program with various inputs:
+
+Input 1: n = 10, m = 50
+The maximum value that can be obtained is: 350
+Time taken: 7300 nanoseconds
+Input 3: n = 100, m = 200
+The maximum value that can be obtained is: 1802
+Time taken: 6300 nanoseconds
+Input 4: n = 1000, m = 2000
+The maximum value that can be obtained is:  17912
+Time taken: 12500 nanoseconds
+Input 4: n = 10000, m = 12500
+The maximum value that can be obtained is:  116537
+Time taken: 23800 nanoseconds
+
+Please note that the actual runtime may vary depending on the machine's performance and the specific random dataset generated.
+
+

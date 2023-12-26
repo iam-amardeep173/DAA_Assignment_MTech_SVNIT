@@ -1,0 +1,36 @@
+#############################################
+System Reqruirements
+    --> Compiler : g++ compiler
+    --> Hardware : sufficient main memory
+    --> OS       : Windows
+#############################################
+
+Program File : Question-1.cpp
+How to run the program: Open Command Prompt/Powershell
+                        Go to the folder using cd
+                        Run the following command to compile the cpp file
+Command to compile and run the program : Command to run program : g++ -o Question-1 Question-1.cpp&Question-1.exe
+
+    1.# Remove Duplicate Letters
+        This C++ program removes duplicate letters from a given string while maintaining the smallest lexicographical order.
+
+	*Program Description
+	    This C++ program implements a function removeDuplicateLetters that takes a string s as input and returns a
+            new string with the smallest lexicographical order without any duplicate letters.
+            The algorithm used in this program employs a stack and two unordered maps to keep track of the last 
+            occurrence of each character and whether a character is currently in the stack.
+
+    2. Time Complexity
+        The time complexity of this algorithm can be analyzed as follows:
+        Constructing the last_occurrence map takes O(N) time, where N is the length of the input string.
+        The main loop that iterates through the string has a time complexity of O(N) as well.
+        Inside the loop, there is another loop (the while loop) that can iterate over a subset of characters in the stack. 
+        In the worst case, this inner loop can have a combined time complexity of O(N), although it does not run N times for each character in the input string.
+        Therefore, the overall time complexity of the removeDuplicateLetters function is O(N), where N is the length of the input string.
+
+     3. Empirical Analysis of Time Complexity
+        Smallest lexicographical order without duplicates: acdb
+
+    
+    
+

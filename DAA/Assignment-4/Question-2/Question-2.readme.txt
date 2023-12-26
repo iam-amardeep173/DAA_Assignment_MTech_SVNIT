@@ -1,0 +1,71 @@
+#############################################
+System Reqruirements
+    --> Compiler : g++ compiler
+    --> Hardware : sufficient main memory
+    --> OS       : Windows
+#############################################
+
+Program File : Question-2.cpp
+How to run the program: Open Command Prompt/Powershell
+                        Go to the folder using cd
+                        Run the following command to compile the cpp file
+Command to compile and run the program : Command to run program : g++ -o Question-2 Question-2.cpp&Question-2.exe
+
+1.Word Reconstruction Algorithm:
+             This C++ program implements a dynamic programming algorithm to determine if a given input string can be reconstructed using a provided dictionary of words. 
+             If reconstruction is possible, the program outputs the reconstructed sequence of words.
+
+2.Algorithm :
+	     The algorithm employs dynamic programming to solve the problem of reconstructing a string. Here are the key components:
+
+      1.1 Dynamic Programming Array (dp)
+	The dp array of boolean values is used to represent whether a substring of the input string can be reconstructed using the provided dictionary.
+	Time Complexity: O(n^2), where n is the length of the input string.
+
+      1.2 Parent Array (parent)
+        The parent array stores the index of the last word ending at a particular position in the string, facilitating the reconstruction of the sequence of words.
+        Time Complexity: O(n^2), where n is the length of the input string.
+
+      1.3 Reconstruction Process
+	The reconstruction process involves backtracking through the parent array to output the sequence of words.
+	Time Complexity: O(n), where n is the length of the input string.
+
+3. Time Complexity
+             The time complexity of the main algorithm (canReconstruct function) is O(n^2), where n is the length of the input string. This is because, for each position i
+             in the string, the algorithm checks all substrings from position j to i-1, where j can vary from 0 to i-1.
+
+4.Empirical Analysis:
+Enter the text: itwasthebestoftime
+Enter the number of words in the dictionary: 6
+Enter the words in the dictionary, one per line:
+it
+was
+the
+best
+of
+time
+The string can be reconstructed.
+Reconstructed sequence of words: time of best the was it 
+Time taken by the algorithm: 2507 microseconds
+
+Enter the text: IamAmarDeepFromLakhimpurKheriUttarPradesh
+Enter the number of words in the dictionary: 9
+Enter the words in the dictionary, one per line:
+I
+am
+Amar
+Deep
+From
+Lakhimpur
+Kheri
+
+Uttar
+Pradesh
+The string can be reconstructed.
+Reconstructed sequence of words: Pradesh Uttar Kheri Lakhimpur From Deep Amar am I
+Time taken by the algorithm: 7742 microseconds
+
+5. Observations
+	The algorithm performs reasonably well for small to medium-sized input strings and dictionaries.
+	The time complexity may become a concern for very long input strings or large dictionaries.
+	The efficiency of the algorithm depends on the nature of the input string and the size of the dictionary.

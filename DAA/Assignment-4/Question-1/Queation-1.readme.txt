@@ -1,0 +1,65 @@
+#############################################
+System Reqruirements
+    --> Compiler : g++ compiler
+    --> Hardware : sufficient main memory
+    --> OS       : Windows
+#############################################
+
+Program File : Question-1.cpp
+How to run the program: Open Command Prompt/Powershell
+                        Go to the folder using cd
+                        Run the following command to compile the cpp file
+Command to compile and run the program : Command to run program : g++ -o Question-1 Question-1.cpp&Question-1.exe
+
+Optimal Hotel Sequence Finder
+This C++ program implements a dynamic programming solution to find the optimal sequence of hotels to minimize the penalty for a given set of hotel mileposts.
+
+Algorithm
+The algorithm works as follows:
+
+Input: Number of hotels (numHotels) and the mileposts of each hotel (hotels vector).
+Initialize a dynamic programming array (dp) to store the minimum penalty to reach each hotel.
+Calculate the penalty for reaching the first hotel and set it as the base case in dp.
+Iterate through each hotel, computing the penalty for reaching it from each previous hotel and updating the minimum penalty in dp.
+Backtrack through the dp array to find the optimal sequence of hotels that minimizes the total penalty.
+Output the optimal sequence and the total penalty.
+
+Time Complexity
+
+Let n be the number of hotels:
+
+  1.The time complexity of filling the dynamic programming array is O(n^2) due to the nested loop iterating over pairs of hotels.
+  2.The backtracking step also takes O(n^2) in the worst case.
+
+Therefore, the overall time complexity is O(n^2).
+
+Empirical Analysis:
+ Enter the number of hotels: 6                     
+Enter the mileposts of hotels:
+50
+100
+150
+250
+330 
+400
+Optimal sequence of hotels: 50 250 400   
+Total penalty: 25000
+Time taken by function: 1947 microseconds
+
+Enter the number of hotels: 10
+Enter the mileposts of hotels:
+50
+12
+150
+250
+300
+450
+500
+650
+700
+750
+Optimal sequence of hotels: 50 300 500 750 
+Total penalty: 27500
+Time taken by function: 2126 microseconds
+
+The empirical analysis results can be included based on actual measurements and observations obtained by running the program with different input sizes.

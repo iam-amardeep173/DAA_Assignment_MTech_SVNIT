@@ -1,0 +1,71 @@
+#############################################
+System Reqruirements
+    --> Compiler : g++ compiler
+    --> Hardware : sufficient main memory
+    --> OS       : Windows
+#############################################
+
+Program File : Question-15.cpp
+How to run the program: Open Command Prompt/Powershell
+                        Go to the folder using cd
+                        Run the following command to compile the cpp file
+Command to compile and run the program : Command to run program : g++ -o Question-15 Question-15.cpp&Question-15.exe
+
+*** Huffman coding ***
+
+** Overview **
+	This repository contains a C++ implementation of the Huffman coding algorithm. 
+	Huffman coding is a data compression technique that assigns variable-length codes to characters in such a way that more frequent characters are assigned shorter codes, reducing the overall size of the encoded data.
+
+** Algorithm Complexity **
+	The Huffman coding algorithm's complexity can be analyzed as follows:
+  Time Complexity:
+	Building the frequency map: O(n), where n is the length of the input text.
+	Building the priority queue: O(k * log(k)), where k is the number of unique characters.
+	Building the Huffman tree: O(k * log(k)) as well, where k is the number of unique characters.
+	Encoding the text: O(n), where n is the length of the input text.
+	Decoding the text: O(n), where n is the length of the encoded text.
+	Overall time complexity: O(n + k * log(k))
+
+  Space Complexity:
+	Storing the frequency map: O(k), where k is the number of unique characters.
+	Storing the priority queue: O(k).
+	Storing the Huffman tree: O(k).
+	Overall space complexity: O(k)
+
+** Asymptotic Analysis **
+	The asymptotic analysis of the Huffman coding algorithm suggests that its time complexity is O(n + k * log(k)), where n is the length of the input text, and k is the number of unique characters. 
+	This analysis implies that the algorithm's efficiency increases with a larger input text size and a larger number of unique characters.
+
+** OUTPUT **
+Huffman Codes are:
+
+d 11111
+c 11110
+r 11101
+l 110111
+h 111001
+. 110110
+i 000
+o 001
+e 111000
+H 10010
+a 010
+n 1000
+  101
+s 0110
+f 11010
+m 0111
+g 10011
+t 11000
+p 110010
+u 110011
+
+The original string is:
+Huffman coding is a data compression algorithm.
+
+The encoded string is:
+10010110011110101101001110101000101111100011111100010001001110100001101010101011111101011000010101111100010111110010111011110000110011000000110001010101101111001100111101000110001110010111110110       
+
+The decoded string is:
+Huffman coding is a data compression algorithm.

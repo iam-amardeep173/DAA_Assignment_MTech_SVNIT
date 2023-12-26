@@ -1,0 +1,66 @@
+#############################################
+System Reqruirements
+    --> Compiler : g++ compiler
+    --> Hardware : sufficient main memory
+    --> OS       : Windows
+#############################################
+
+Program File : Question-5.cpp
+How to run the program: Open Command Prompt/Powershell
+                        Go to the folder using cd
+                        Run the following command to compile the cpp file
+Command to compile and run the program : Command to run program : g++ -o Question-5 Question5.cpp&Question5.exe
+
+------------------------------------
+Bipartite Graph Coloring
+------------------------------------
+	This C++ program determines if a given graph is bipartite (2-colorable) using depth-first search (DFS). 
+	It reads a graph from the user and colors its vertices in such a way that adjacent vertices have different colors if possible. If all vertices can be colored this way, the graph is considered bipartite; otherwise, it's not. 
+	The program also measures and displays the execution time.
+-------------------------------
+Asymptotic Analysis
+-------------------------------
+	Time Complexity: The time complexity of this algorithm is O(V + E), where V is the number of vertices, and E is the number of edges. 
+	The DFS-based color assignment takes O(V + E) time, and the loop in the check_coloring function runs at most V times.
+
+	Space Complexity: The space complexity is O(V + E) due to the adjacency list representation and the color vector.
+
+--------------------------
+Algorithm Explanation
+--------------------------
+	The algorithm first creates an adjacency list representation of the graph. Then, it initializes an array to store the color of each vertex. 
+	The color of each vertex is initially set to 0 (unassigned).
+	The check_coloring() function is then called to check whether the graph is 2-colorable. This function works by recursively coloring the vertices of the graph. 
+	If the function is able to color all of the vertices without any conflicts, then the graph is 2-colorable. Otherwise, the graph is not 2-colorable.
+------------------
+Time Complexity
+------------------
+	The time complexity of the check_coloring() function is O(V + E), where V is the number of vertices and E is the number of edges in the graph. 
+	This is because the function needs to iterate over all vertices and all edges to check if the coloring is valid.
+
+----------------
+Output
+----------------
+Enter N (nodes):
+5
+Enter edges: (-1) to exit
+1 2
+2 3
+3 4
+4 5
+-1
+The graph is 2-colorable (bipartite).
+Time taken: 524400 nanoseconds
+
+Enter N (nodes):
+5
+
+Enter edges: (-1) to exit
+1 2
+2 3
+3 1
+4 5
+-1 -1
+
+The graph is 2-colorable (bipartite).
+Time taken: 13 nanoseconds

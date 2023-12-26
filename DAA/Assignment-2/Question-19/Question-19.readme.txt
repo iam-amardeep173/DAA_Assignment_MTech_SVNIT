@@ -1,0 +1,82 @@
+#############################################
+System Reqruirements
+    --> Compiler : g++ compiler
+    --> Hardware : sufficient main memory
+    --> OS       : Windows
+#############################################
+
+Program File : Question-19.cpp
+How to run the program: Open Command Prompt/Powershell
+                        Go to the folder using cd
+                        Run the following command to compile the cpp file
+Command to compile and run the program : Command to run program : g++ -o Question-19 Question-19.cpp&Question-19.exe
+
+***  Kruskal's algorithm and Prim's algorithm ***
+
+** Overview **
+	This C++ program compares the performance of two different algorithms, Kruskal's algorithm and Prim's algorithm, for finding the Minimum Spanning Tree (MST) of randomly generated graphs. 
+        
+**Program Description**
+	The program includes the following components:
+  Graph Representation: A graph is represented using a custom Graph class, with the ability to add edges and store them in a vector.
+
+  Kruskal's Algorithm: The Kruskal class implements Kruskal's algorithm for finding the MST of a graph. It sorts the edges by weight and greedily adds edges to the MST if they do not create a cycle.
+
+  Prim's Algorithm: The Prim class implements Prim's algorithm for finding the MST of a graph. It starts with an arbitrary node, repeatedly adds the shortest edge to the MST, and updates the minimum key values.
+
+  Random Graph Generation: Random graphs are generated with varying sizes and densities. The program measures and compares the execution times of Kruskal's and Prim's algorithms for each graph.
+
+** Algorithm Complexity **
+  1.Kruskal's Algorithm:
+	Time Complexity: O(E * log(E) + E * α(V))
+	Space Complexity: O(V + E)
+  2.Prim's Algorithm:
+	Time Complexity: O(V^2) using an adjacency matrix, or O(E + V * log(V)) using an adjacency list (with suitable data structures)
+	Space Complexity: O(V + E)
+
+** Asymptotic Analysis **
+  1.Kruskal's Algorithm:
+	Time Complexity: O(E * log(E)) in the worst case, where E is the number of edges. This dominates the time complexity.
+	Space Complexity: O(V + E) due to the graph representation.
+
+  2.Prim's Algorithm:
+	Time Complexity: O(E + V * log(V)) with a suitable data structure to efficiently extract the minimum key value. This dominates the time complexity.
+	Space Complexity: O(V + E) due to the graph representation.
+
+** OUTPUT **
+Graph Size: 100, Density: 0.2 
+Kruskal's Algorithm Time: 1 ms
+Prim's Algorithm Time: 12 ms  
+------------------------      
+Graph Size: 100, Density: 0.4 
+Kruskal's Algorithm Time: 2 ms
+Prim's Algorithm Time: 29 ms  
+------------------------      
+Graph Size: 100, Density: 0.6 
+Kruskal's Algorithm Time: 4 ms
+Prim's Algorithm Time: 47 ms  
+------------------------      
+Graph Size: 200, Density: 0.2 
+Kruskal's Algorithm Time: 7 ms
+Prim's Algorithm Time: 111 ms
+------------------------
+Graph Size: 200, Density: 0.4
+Kruskal's Algorithm Time: 21 ms
+Prim's Algorithm Time: 220 ms
+------------------------
+Graph Size: 200, Density: 0.6
+Kruskal's Algorithm Time: 22 ms
+Prim's Algorithm Time: 302 ms
+------------------------
+Graph Size: 300, Density: 0.2
+Kruskal's Algorithm Time: 21 ms
+Prim's Algorithm Time: 349 ms
+------------------------
+Graph Size: 300, Density: 0.4
+Kruskal's Algorithm Time: 48 ms
+Prim's Algorithm Time: 701 ms
+------------------------
+Graph Size: 300, Density: 0.6
+Kruskal's Algorithm Time: 61 ms
+Prim's Algorithm Time: 969 ms
+------------------------

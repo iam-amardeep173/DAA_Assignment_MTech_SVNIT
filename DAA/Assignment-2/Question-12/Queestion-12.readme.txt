@@ -1,0 +1,40 @@
+#############################################
+System Reqruirements
+    --> Compiler : g++ compiler
+    --> Hardware : sufficient main memory
+    --> OS       : Windows
+#############################################
+
+Program File : Question-12.cpp
+How to run the program: Open Command Prompt/Powershell
+                        Go to the folder using cd
+                        Run the following command to compile the cpp file
+Command to compile and run the program : Command to run program : g++ -o Question-12 Question-12.cpp&Question-12.exe
+
+*** Euler Circuit Finder ***
+
+** Overview **
+	This C++ program is designed to find an Euler circuit in a directed graph.
+	 An Euler circuit is a path that visits every edge of a graph exactly once and returns to the starting vertex.
+
+** Algorithm Complexity **
+	The algorithm used in this program is based on Hierholzer's algorithm for finding Eulerian circuits in a directed graph. 
+
+	The algorithm's complexity can be analyzed as follows:
+	Time Complexity: The algorithm has a time complexity of O(V + E), where V is the number of vertices and E is the number of edges in the graph. This is because we visit each edge once.
+	Space Complexity: The space complexity is O(V + E) due to the use of data structures such as vectors to store the adjacency lists and stacks to keep track of the circuit.
+
+** Asymptotic Analysis **
+	The time complexity of O(V + E) implies that the algorithm's running time increases linearly with the number of vertices and edges in the graph. 
+	This is an efficient algorithm for finding Euler circuits, and it can handle large graphs with many vertices and edges without significant performance issues.
+
+** OUTPUT **
+Enter the number of vertices: 5
+Enter the number of edges: 5
+Enter the edges (format: source destination):
+0 1
+1 2
+2 3
+3 4
+4 0
+Euler Circuit:

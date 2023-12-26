@@ -1,0 +1,51 @@
+#############################################
+System Reqruirements
+    --> Compiler : g++ compiler
+    --> Hardware : sufficient main memory
+    --> OS       : Windows
+#############################################
+
+Program File : Question-3.cpp
+How to run the program: Open Command Prompt/Powershell
+                        Go to the folder using cd
+                        Run the following command to compile the cpp file
+Command to compile and run the program : Command to run program : g++ -o Question-3 Question-3.cpp&Question-3.exe
+
+1. Parenthesize String Algorithm:
+	This program determines whether it is possible to parenthesize a given string of symbols to obtain the sequence 'a' using a stack-based approach.
+
+2. Algorithm Overview:
+	The algorithm uses a stack to process each symbol in the input string. It iterates through the symbols and checks whether they can
+	be paired based on a predefined pairing rule. The pairing rule is defined as follows:
+
+	'a' pairs with 'b'
+	'b' pairs with 'c'
+	'c' pairs with 'a'
+	The program uses a stack to keep track of the symbols and their pairing relationships. If a symbol can pair with the top symbol of the stack, it updates the stack accordingly. 
+	The final result is determined by checking if the stack contains only one element, and that element is 'a'.
+
+3. Algorithm Complexity:
+    3.1.Time Complexity
+	The time complexity of the algorithm is O(n), where n is the length of the input string. The program iterates through each symbol once, 
+	and the stack operations take constant time.
+
+    3.2.Space Complexity
+	The space complexity is also O(n), where n is the length of the input string. In the worst case, the stack may contain all symbols of the input string.
+
+4. Empirical Analysis:
+	Enter the string of symbols: ab
+	Yes, it is possible to parenthesize the string to get 'a'.
+	Time taken: 458 microseconds
+
+	Enter the string of symbols: ababcaa
+	No, it is not possible to parenthesize the string to get 'a'.
+	Time taken: 611 microseconds
+
+	Enter the string of symbols: abbccab
+	No, it is not possible to parenthesize the string to get 'a'.
+	Time taken: 1093 microseconds
+
+5. Conclusion
+	The program provides a simple and efficient solution to the problem of checking if a given string can be parenthesized according to a specific pairing rule. 
+	The algorithm's time complexity is linear, making it suitable for a wide range of input sizes.
+

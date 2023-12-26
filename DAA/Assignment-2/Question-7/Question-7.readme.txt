@@ -1,0 +1,57 @@
+#############################################
+System Reqruirements
+    --> Compiler : g++ compiler
+    --> Hardware : sufficient main memory
+    --> OS       : Windows
+#############################################
+
+Program File : Question7.cpp
+How to run the program: Open Command Prompt/Powershell
+                        Go to the folder using cd
+                        Run the following command to compile the cpp file
+Command to compile and run the program : Command to run program : g++ -o Question7 Question7.cpp&Question7.exe
+
+*** Knapsack Problem Solver ***
+
+** Overview **
+	This C++ program is designed to solve the 0/1 Knapsack Problem using a greedy approach. 
+	The 0/1 Knapsack Problem is a classical optimization problem in computer science and mathematics. 
+	Given a set of items, each with a weight and a value, the goal is to determine the most valuable combination of items to include in a knapsack of limited capacity.
+	The algorithm used in this program sorts the items by their value-to-weight ratio in descending order and selects items to maximize the total value while staying within the knapsack's weight limit. 
+	If an item cannot be included entirely, it adds a fraction of the item to maximize the value.
+
+** Algorithm Complexity **
+	The core algorithm complexity of this solution involves two main steps: generating the dataset and solving the knapsack problem.
+    ** Generate Dataset: **
+	Time Complexity: O(n^2) due to the sorting operation (Insertion Sort) based on value-to-weight ratio, where 'n' is the number of items.
+	Space Complexity: O(n) for storing the dataset.
+
+    ** Knapsack Problem Solving: **
+	Time Complexity: O(n) for iterating through the sorted items and performing calculations, where 'n' is the number of items.
+	Space Complexity: O(1) for storing a few variables.
+	Overall, the time complexity of the entire solution is dominated by the sorting step and is O(n^2). The space complexity is O(n) for storing the dataset.
+
+** Asymptotic Analysis **
+	The asymptotic analysis of this program reveals that the time complexity is quadratic (O(n^2)), which may not be efficient for large datasets. 
+	The sorting step, using insertion sort, contributes significantly to the time complexity.
+        The space complexity is linear (O(n)), which means that the program uses additional memory linearly proportional to the number of items in the dataset.
+
+** Empirical Analysis **
+      The program includes timing measurements to empirically analyze its performance. Here are the results of running the program with various inputs:
+
+Input 1: n = 10, m = 50
+The maximum value that can be obtained is: 54
+Time taken:  5000 nanoseconds
+Input 3: n = 100, m = 200
+The maximum value that can be obtained is: 1769 
+Time taken: 7200 nanoseconds
+Input 4: n = 1000, m = 2000
+The maximum value that can be obtained is:  60808
+Time taken: 8300 nanoseconds
+Input 4: n = 10000, m = 12500
+The maximum value that can be obtained is:  1563796
+Time taken:  8600 nanoseconds
+
+Please note that the actual runtime may vary depending on the machine's performance and the specific random dataset generated.
+
+

@@ -1,0 +1,48 @@
+#############################################
+System Reqruirements
+    --> Compiler : g++ compiler
+    --> Hardware : sufficient main memory
+    --> OS       : Windows
+#############################################
+
+Program File : Question-10.cpp
+How to run the program: Open Command Prompt/Powershell
+                        Go to the folder using cd
+                        Run the following command to compile the cpp file
+Command to compile and run the program : Command to run program : g++ -o Question-10 Question7.cpp&Question7.exe
+
+------------------------------------
+Minimum Base Stations Problem
+------------------------------------
+**Problem Description**
+	Given a set of houses along a road, find the minimum number of base stations needed to cover all the houses with a wireless signal.
+	Each base station can cover a range of four miles to the left and right of its location.
+
+**Algorithm Explanation**
+ The algorithm used to solve this problem is a greedy algorithm. A greedy algorithm is a strategy that makes the optimal choice at each step,
+ hoping to find the global optimum. In this case, the optimal choice is to place a base station as far to the right as possible, while still covering the leftmost uncovered house.
+
+	The algorithm works as follows:
+
+	Sort the houses in ascending order by their positions along the road.
+	Initialize the number of base stations to zero.
+	Initialize the current house under consideration to the first house in the sorted list.
+	While there are still uncovered houses:
+	Find the rightmost house that is within four miles of the current house. This is the candidate location for the base station.
+	Increment the number of base stations by one.
+	Move to the next house that is at least four miles to the right of the candidate location. This is the new current house under consideration.
+	Return the number of base stations as the final answer.
+
+**Asymptotic Analysis**
+	The time complexity of the algorithm is O(n log n), where n is the number of houses. 
+	This is because the algorithm performs a sorting operation, which takes O(n log n) time in the worst case, and then iterates through the houses once, which takes O(n) time. 
+	The space complexity of the algorithm is O(1), since it only uses a constant number of variables.
+
+Output:
+  	House positions along the road: 6 9 17 31 44 49 49 66 74 85 
+	Minimum number of base stations needed: 4
+	Time taken by the algorithm: 7 microseconds
+
+	House positions along the road: 1 2 2 4 5 5 7 8 8 9 10 10 10 10 11 12 12 12 12 13 13 13 13 13 14 14 15 15 15 16 16 16 17 18 18 19 19 20 21 21 21 22 23 23 23 23 23 26 26 26 27 28 28 28 28 29 29 29 29 30 31 31 31 34 34 34 34 35 37 37 37 38 38 39 39 40 41 41 42 42 43 44 44 45 45 45 46 47 47 47 47 48 48 49 50 50 50 50 51 51 51 52 53 53 54 54 54 55 55 55 56 56 57 58 58 58 58 58 58 58 58 58 60 60 60 61 61 62 62 63 63 64 64 64 66 66 66 67 67 67 67 67 69 69 70 70 71 71 73 73 73 73 74 74 75 75 75 76 76 77 78 79 80 80 81 81 82 82 82 84 84 84 84 85 86 86 86 86 87 88 89 89 89 89 90 91 91 91 91 92 93 94 97 97 97 98 99 99 99 100 
+	Minimum number of base stations needed: 10
+	Time taken by the algorithm: 84 microseconds

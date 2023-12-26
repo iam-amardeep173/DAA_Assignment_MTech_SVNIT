@@ -1,0 +1,33 @@
+#############################################
+System Reqruirements
+    --> Compiler : g++ compiler
+    --> Hardware : sufficient main memory
+    --> OS       : Windows
+#############################################
+
+Program File : Question-17.cpp
+How to run the program: Open Command Prompt/Powershell
+                        Go to the folder using cd
+                        Run the following command to compile the cpp file
+Command to compile and run the program : Command to run program : g++ -o Question-17 Question-17.cpp&Question-17.exe
+
+***Dijkstra's Shortest Path Algorithm ***
+
+** Overview **
+	This C++ program demonstrates Dijkstra's algorithm for finding the shortest path in a weighted graph. It uses a priority queue to efficiently process vertices and edges.
+
+** Algorithm Complexity **
+	Time Complexity: O((V + E)logV), where V is the number of vertices and E is the number of edges in the graph. 
+	 This is because the priority queue operations take O(logV) time and each edge is processed once.
+
+	Space Complexity: O(V), where V is the number of vertices. This is due to the space needed to store the vertices and their adjacency lists.
+
+** Asymptotic Analysis **
+	Time Complexity: The algorithm's time complexity depends on the number of vertices (V) and edges (E) in the graph.
+ 	 As the size of the graph increases, the time taken will also increase, but at a diminishing rate due to the logarithmic term.
+	Space Complexity: The space complexity is primarily determined by the number of vertices in the graph. 
+	 As the number of vertices increases, the space required will also increase linearly.
+
+** OUTPUT **
+The shortest travel time from Lakhimpur to Shahjahanpur is 95 minutes.
+Route: Lakhimpur -> GolaGokarannath -> Shahjahanpur

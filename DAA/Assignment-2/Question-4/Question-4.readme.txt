@@ -1,0 +1,40 @@
+#############################################
+System Reqruirements
+    --> Compiler : g++ compiler
+    --> Hardware : sufficient main memory
+    --> OS       : Windows
+#############################################
+
+Program File : Question-4.cpp
+How to run the program: Open Command Prompt/Powershell
+                        Go to the folder using cd
+                        Run the following command to compile the cpp file
+Command to compile and run the program : Command to run program : g++ -o Question-4 Question-4.cpp&Question-4.exe
+
+    1.## Activity Selection Algorithm
+
+        This C++ program demonstrates the implementation of activity selection using the "Greedy Algorithm". The goal is to select the maximum number of non-overlapping activities.
+          
+         ## Algorithm Explanation
+                The algorithm works as follows:
+                  1. Sort activities based on their finish times.
+                  2. Initialize an empty list for selected activities.
+                  3. Add the first activity to the list.
+                  4. For each remaining activity, if its start time is greater than or equal to the finish time of the previously selected activity, add it to the list.
+                  5. Finally, print the selected activities.
+
+	
+
+    2. Time Complexity
+        The time complexity of the Activity Selection Algorithm is O(n log n) due to the sorting step. Here's a breakdown of the time complexity:
+        Sorting activities: O(n log n)
+        Finding non-overlapping activities: O(n)
+        The dominating factor is the sorting step, resulting in O(n log n) as the overall time complexity.
+
+     3.#Output
+       Selected activities are:      
+	Start time: 1, Finish time: 4 
+	Start time: 5, Finish time: 7 
+	Start time: 8, Finish time: 11
+    
+

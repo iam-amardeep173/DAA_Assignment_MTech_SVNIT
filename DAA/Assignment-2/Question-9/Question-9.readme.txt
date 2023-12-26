@@ -1,0 +1,42 @@
+#############################################
+System Reqruirements
+    --> Compiler : g++ compiler
+    --> Hardware : sufficient main memory
+    --> OS       : Windows
+#############################################
+
+Program File : Question9.cpp
+How to run the program: Open Command Prompt/Powershell
+                        Go to the folder using cd
+                        Run the following command to compile the cpp file
+Command to compile and run the program : Command to run program : g++ -o Question9 Question9.cpp&Question9.exe
+
+*** Petrol Station Road Trip Solver ***
+
+** Overview **
+	This C++ program helps you find the optimal petrol stations to stop at for a road trip from your starting point to New Delhi. 
+        Given a list of petrol stations along the route, their distances from the starting point, the petrol available at each station, 
+        and the maximum tank capacity of your car, the program calculates the most efficient stops to ensure you reach your destination.
+
+** Algorithm Complexity **
+	The core of this program is a simple greedy algorithm that iterates through the list of petrol stations and makes decisions at each station. 
+
+	The complexity of the algorithm is as follows:
+    **Time Complexity: O(n)**
+        The program iterates through the list of petrol stations once, where 'n' is the number of petrol stations.
+    **Space Complexity: O(1)**
+        The space used by the program is constant and does not depend on the number of petrol stations.
+
+** Asymptotic Analysis **
+	The program's time complexity is linear (O(n)), which means that the time it takes to find the optimal petrol stations increases linearly with the number of petrol stations. 
+	This is efficient for small to moderately large datasets.
+
+** OUTPUT **
+Enter the number of petrol stations: 4 
+Enter the distance and petrol available at each station:
+100 20
+300 5
+400 30
+200 25
+Enter the maximum tank capacity of the car: 150
+Optimal petrol stations to stop at: 100      

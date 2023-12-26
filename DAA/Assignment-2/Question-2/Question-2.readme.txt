@@ -1,0 +1,48 @@
+#############################################
+System Reqruirements
+    --> Compiler : g++ compiler
+    --> Hardware : sufficient main memory
+    --> OS       : Windows
+#############################################
+
+Program File : Question-3.cpp
+How to run the program: Open Command Prompt/Powershell
+                        Go to the folder using cd
+                        Run the following command to compile the cpp file
+Command to compile and run the program : Command to run program : g++ -o Question-3 Question-3.cpp&Question-3.exe
+
+    1.# **Billboard Placement Problem**
+        This C++ program solves the Billboard Placement Problem, which aims to maximize the total revenue by placing billboards along a highway with specific positions and revenues.
+	The program uses dynamic programming to find the optimal solution.
+        
+    2.  Problem Description
+         Given a highway of length M and a list of billboard positions and their corresponding revenues, the goal is to find the maximum total revenue by placing billboards on the highway.
+         The placement constraints are as follows:
+		1.A billboard can be placed at any integer position on the highway.
+		2.No two billboards can be placed within 6 units of each other.
+
+    3. Algorithm:
+	Sort billboards by position
+	Initialize totalRevenue to 0
+	Initialize prevPos to 0
+	For each billboard in sorted billboards:
+	    If billboard.position - prevPos <= 6:
+	        totalRevenue += billboard.revenue
+	        prevPos = billboard.position
+	Return totalRevenue
+
+
+      
+    3. Time Complexity
+	   The time complexity of this program is determined by the maxRevenue function, which uses dynamic programming to solve the problem. 
+           The dynamic programming approach ensures that we do not recompute the same subproblem multiple times, making the solution efficient.
+  		Time complexity: O(M * n)
+			M: Length of the highway
+			n: Number of billboards
+
+     3. Empirical Analysis of Time Complexity
+        Smallest lexicographical order without duplicates: acdb
+
+    
+    
+

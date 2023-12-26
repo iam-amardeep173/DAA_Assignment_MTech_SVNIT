@@ -1,0 +1,53 @@
+#############################################
+System Reqruirements
+    --> Compiler : g++ compiler
+    --> Hardware : sufficient main memory
+    --> OS       : Windows
+#############################################
+
+Program File : Question-18.cpp
+How to run the program: Open Command Prompt/Powershell
+                        Go to the folder using cd
+                        Run the following command to compile the cpp file
+Command to compile and run the program : Command to run program : g++ -o Question-18 Question-18.cpp&Question-18.exe
+
+***Rumor Sharing Algorithm ***
+
+** Overview **
+	This C++ program implements an algorithm to share rumors among a group of people. 
+	The program asks for the number of people and the number of rumors and allows the user to input the number of rumors for each person. 
+	The algorithm then determines the minimum number of messages needed to share all the rumors among the people.
+
+** Algorithm Complexity **
+	The complexity of this algorithm can be analyzed as follows:
+Input Phase:
+	Initializing the people vector with IDs and empty rumor lists takes O(n) time.
+	Inputting rumors for each person takes O(m) time, where m is the total number of rumors.
+Sorting Phase:
+	Sorting people based on the number of rumors takes O(n * log(n)) time using the custom comparator.
+Rumor Sharing Phase:
+	The while loop runs until there are people who need rumors, and in each iteration, we go through the list of people who need rumors. 
+	In the worst case, each person is checked for sharing rumors.
+	In the inner loop, for each rumor, we iterate through the list of people who need rumors to check if the rumor can be shared. 
+	This loop has a complexity of O(n) in the worst case.
+	Overall, the worst-case time complexity of the rumor sharing phase is O(n^2 * m).
+Output Phase:
+	Outputting the minimum number of messages is a constant time operation.
+
+** Asymptotic Analysis **
+	The overall time complexity of the algorithm is dominated by the rumor sharing phase, which is O(n^2 * m). 
+	This is because we have a nested loop structure where, in the worst case, we check all remaining people for sharing each rumor.
+	The algorithm's time complexity is sensitive to the number of people (n) and the number of rumors (m). 
+	If n and m are both large, the algorithm may take a significant amount of time.
+	The sorting phase has a time complexity of O(n * log(n)), which can be a significant factor for large values of n.
+
+** OUTPUT **
+Enter the number of people: 3
+Enter the number of rumors: 3
+Enter the number of rumors for person 0: 2 
+Enter the rumor IDs (space-separated) for person 0: 2 6
+Enter the number of rumors for person 1: 4
+Enter the rumor IDs (space-separated) for person 1: 2 3 6 9
+Enter the number of rumors for person 2: 3
+Enter the rumor IDs (space-separated) for person 2: 5 6 8
+Minimum number of messages needed: 2

@@ -1,0 +1,52 @@
+#############################################
+System Reqruirements
+    --> Compiler : g++ compiler
+    --> Hardware : sufficient main memory
+    --> OS       : Windows
+#############################################
+
+Program File : Question3.cpp
+How to run the program: Open Command Prompt/Powershell
+                        Go to the folder using cd
+                        Run the following command to compile the cpp file
+Command to compile and run the program : Command to run program : g++ -o Question3 Question3.cpp&Question3.exe
+
+----------------------------------------------------------------------------------
+Billboard Max Revenue Calculator (Greedy Approach)
+----------------------------------------------------------------------------------
+This C++ program calculates the maximum revenue that can be earned by placing billboards along a road using a greedy approach.
+
+**Algorithm Explanation (Greedy Approach)**
+This program employs a greedy approach to find the maximum revenue achievable by placing billboards. The algorithm works as follows:
+
+	Initialize variables for the maximum distance M, a list of billboard positions, and a list of corresponding revenues.
+	Sort the billboard data by position in non-decreasing order.
+	Initialize a variable totalRevenue to store the maximum total revenue.
+	Initialize a variable currentPos to keep track of the current position.
+	Iterate through the sorted billboard data:
+	Calculate the gap between the current billboard's position and the previous one (or the road's start).
+	If the gap is less than 6, add the current billboard's revenue to totalRevenue.
+	Update currentPos to the position of the current billboard.
+	Return totalRevenue as the maximum total revenue achievable.
+
+
+**Asymptotic Analysis**
+	Time Complexity: The time complexity of the greedy algorithm is O(n * log(n)) for sorting the billboard data, where n is the number of billboards. 
+	The subsequent loop through the sorted data has a linear time complexity of O(n). Therefore, the overall time complexity is O(n * log(n)).
+
+	Space Complexity: The space complexity is O(n) to store the positions and revenues of the billboards.
+
+**Empirical Analysis**
+	The empirical analysis of the program involves measuring its runtime performance with varying inputs. 
+	In this program, the runtime mainly depends on the number of billboards (n) and the sorting step's complexity.
+	You can experiment with different values of n to observe how the runtime changes and compare it with the dynamic programming approach presented earlier.
+
+	Feel free to modify the program and perform empirical analysis with different input values to further understand its performance.
+
+	By choosing the greedy approach, you optimize the time complexity and achieve an efficient solution for the problem.
+
+**Output**
+	Random Positions: 4 7 18 15 
+	Random Revenues: 9 7 6 3 
+	Maximum total revenue: 15
+	Time duration for finding the result: 8 microseconds
